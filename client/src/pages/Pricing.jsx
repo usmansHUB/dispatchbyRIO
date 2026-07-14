@@ -113,13 +113,13 @@ const Pricing = () => {
             transition={{ duration: 0.7 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                          rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-6">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                          rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-6">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               Our Prices
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Simple, <span className="text-primary">Transparent</span> Pricing
+              Simple, <span className="text-gray-300">Transparent</span> Pricing
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
               No hidden fees, no long-term contracts. Pay only a small percentage of your 
@@ -142,12 +142,12 @@ const Pricing = () => {
                 className={`relative rounded-2xl overflow-hidden transition-all duration-500 
                           hover:-translate-y-2 hover:shadow-2xl ${
                   plan.popular
-                    ? 'bg-dark text-white shadow-xl shadow-black/20 lg:scale-105 border-2 border-primary'
+                    ? 'bg-dark text-white shadow-xl shadow-black/20 lg:scale-105 border-2 border-white'
                     : 'bg-white text-dark border border-gray-200 hover:shadow-black/10'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-primary text-dark text-center 
+                  <div className="absolute top-0 left-0 right-0 bg-white text-dark text-center 
                                 py-2 text-sm font-bold flex items-center justify-center gap-1">
                     <FaStar className="text-xs" />
                     Most Popular
@@ -165,10 +165,10 @@ const Pricing = () => {
 
                   <div className="mb-8">
                     <div className="flex items-end gap-1">
-                      <span className={`text-5xl font-extrabold ${plan.popular ? 'text-primary' : 'text-dark'}`}>
+                      <span className={`text-5xl font-extrabold ${plan.popular ? 'text-white' : 'text-dark'}`}>
                         {plan.percentage}
                       </span>
-                      <span className={`text-2xl font-bold mb-1 ${plan.popular ? 'text-primary' : 'text-dark'}`}>
+                      <span className={`text-2xl font-bold mb-1 ${plan.popular ? 'text-white' : 'text-dark'}`}>
                         {plan.suffix}
                       </span>
                     </div>
@@ -181,9 +181,9 @@ const Pricing = () => {
                     {plan.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3">
                         <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
-                          plan.popular ? 'bg-primary/20' : 'bg-primary/10'
+                          plan.popular ? 'bg-white/10' : 'bg-dark/5'
                         }`}>
-                          <FaCheck className="text-primary text-[10px]" />
+                          <FaCheck className={`text-[10px] ${plan.popular ? 'text-white' : 'text-dark'}`} />
                         </div>
                         <span className={`text-sm ${plan.popular ? 'text-gray-300' : 'text-gray-600'}`}>
                           {feature}
@@ -211,8 +211,8 @@ const Pricing = () => {
                     className={`w-full text-center py-3.5 rounded-full font-bold text-sm 
                               transition-all duration-300 flex items-center justify-center gap-2 ${
                       plan.popular
-                        ? 'bg-primary text-dark hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30'
-                        : 'bg-dark text-primary hover:bg-primary hover:text-dark'
+                        ? 'bg-white text-dark hover:bg-gray-200 hover:shadow-lg hover:shadow-white/20'
+                        : 'bg-dark text-white hover:bg-gray-800'
                     }`}
                   >
                     Get Started
@@ -235,7 +235,7 @@ const Pricing = () => {
             className="text-center mb-16"
           >
             <h2 className="section-title text-dark mb-4">
-              Compare <span className="text-primary">Plans</span>
+              Compare <span className="text-gray-500">Plans</span>
             </h2>
             <p className="section-subtitle text-gray-500 mx-auto">
               See a detailed side-by-side comparison of what each plan includes
@@ -255,7 +255,7 @@ const Pricing = () => {
                     <th className="text-left py-4 px-6 font-bold text-sm">Feature</th>
                     <th className="text-center py-4 px-4 font-bold text-sm">Starter</th>
                     <th className="text-center py-4 px-4 font-bold text-sm">
-                      <span className="text-primary">Professional</span>
+                      <span className="text-white">Professional</span>
                     </th>
                     <th className="text-center py-4 px-4 font-bold text-sm">Fleet</th>
                   </tr>
@@ -267,7 +267,7 @@ const Pricing = () => {
                       {['starter', 'professional', 'fleet'].map((plan) => (
                         <td key={plan} className="py-3.5 px-4 text-center">
                           {item[plan] === true ? (
-                            <FaCheck className="text-primary mx-auto" />
+                            <FaCheck className="text-dark mx-auto" />
                           ) : item[plan] === false ? (
                             <span className="text-gray-300 text-lg">—</span>
                           ) : (

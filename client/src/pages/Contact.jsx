@@ -88,13 +88,13 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                          rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-6">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                          rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-6">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               Contact Us
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Let's Get Your Trucks <span className="text-primary">Moving</span>
+              Let's Get Your Trucks <span className="text-gray-300">Moving</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
               Ready to start dispatching? Fill out the form below or give us a call. 
@@ -117,8 +117,8 @@ const Contact = () => {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 
                          hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <info.icon className="text-primary text-xl" />
+                <div className="w-14 h-14 bg-dark/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="text-dark text-xl" />
                 </div>
                 <h5 className="text-dark font-bold text-base mb-2">{info.title}</h5>
                 {info.details.map((detail) => (
@@ -126,7 +126,7 @@ const Contact = () => {
                     <a
                       key={detail}
                       href={info.link}
-                      className="text-gray-500 text-sm hover:text-primary transition-colors block"
+                      className="text-gray-500 text-sm hover:text-dark transition-colors block"
                     >
                       {detail}
                     </a>
@@ -151,7 +151,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="section-title text-dark mb-3">
-                Start <span className="text-primary">Dispatching</span> Today
+                Start <span className="text-gray-500">Dispatching</span> Today
               </h2>
               <p className="text-gray-500 text-base mb-8">
                 Fill out the form and our team will reach out to you within the hour.
@@ -180,7 +180,7 @@ const Contact = () => {
                       required
                       placeholder="John Doe"
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               placeholder-gray-400 focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all"
                     />
                   </div>
@@ -194,7 +194,7 @@ const Contact = () => {
                       required
                       placeholder="john@example.com"
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               placeholder-gray-400 focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all"
                     />
                   </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="+1 (555) 000-0000"
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               placeholder-gray-400 focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all"
                     />
                   </div>
@@ -223,7 +223,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Your Company LLC"
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               placeholder-gray-400 focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all"
                     />
                   </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                       value={formData.truckType}
                       onChange={handleChange}
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all appearance-none cursor-pointer"
                     >
                       <option value="">Select Truck Type</option>
@@ -258,7 +258,7 @@ const Contact = () => {
                       value={formData.fleetSize}
                       onChange={handleChange}
                       className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                               focus:border-primary focus:ring-2 focus:ring-primary/20 
+                               focus:border-dark focus:ring-2 focus:ring-dark/20 
                                focus:outline-none transition-all appearance-none cursor-pointer"
                     >
                       <option value="">Select Fleet Size</option>
@@ -280,7 +280,7 @@ const Contact = () => {
                     rows={4}
                     placeholder="Tell us about your trucking operation and what you're looking for..."
                     className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-dark text-sm
-                             placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/20 
+                             placeholder-gray-400 focus:border-dark focus:ring-2 focus:ring-dark/20 
                              focus:outline-none transition-all resize-none"
                   />
                 </div>
@@ -302,9 +302,9 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-col justify-center"
             >
-              <div className="bg-dark rounded-2xl p-8 lg:p-10 mb-8">
+              <div className="bg-dark border border-white/10 rounded-2xl p-8 lg:p-10 mb-8">
                 <h3 className="text-white font-bold text-2xl mb-4">
-                  Why Choose <span className="text-primary">Resolute</span>?
+                  Why Choose <span className="text-gray-300">Resolute</span>?
                 </h3>
                 <div className="space-y-4">
                   {[
@@ -316,20 +316,20 @@ const Contact = () => {
                     '24/7 dispatch and support coverage',
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <FaCheckCircle className="text-primary flex-shrink-0 text-sm" />
+                      <FaCheckCircle className="text-white flex-shrink-0 text-sm" />
                       <span className="text-gray-300 text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-primary rounded-2xl p-8 text-center">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-lg">
                 <h4 className="text-dark font-bold text-xl mb-2">Need Immediate Help?</h4>
-                <p className="text-dark/70 text-sm mb-4">Our dispatch team is available 24/7</p>
+                <p className="text-gray-500 text-sm mb-4">Our dispatch team is available 24/7</p>
                 <a
                   href="tel:+13322285736"
-                  className="inline-flex items-center gap-2 bg-dark text-primary font-bold 
-                           py-3 px-8 rounded-full hover:bg-dark-light transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-dark text-white font-bold 
+                           py-3 px-8 rounded-full hover:bg-gray-800 transition-all duration-300"
                 >
                   <FaPhoneAlt className="text-sm" />
                   +1 (332) 228-5736

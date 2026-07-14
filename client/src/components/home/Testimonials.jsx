@@ -44,7 +44,7 @@ const Testimonials = () => {
   return (
     <section className="bg-dark py-20 lg:py-28 relative overflow-hidden" ref={ref}>
       {/* Decorative */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/3 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -54,13 +54,13 @@ const Testimonials = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                          rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-4">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                          rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-4">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               Testimonials
             </span>
             <h2 className="section-title text-white mb-4">
-              What Our <span className="text-primary">Clients</span> Say
+              What Our <span className="text-gray-400">Clients</span> Say
             </h2>
             <p className="section-subtitle text-gray-400 mx-auto">
               Don't just take our word for it — hear from the drivers who trust us with their business
@@ -80,7 +80,7 @@ const Testimonials = () => {
                 transition={{ duration: 0.4 }}
                 className="bg-dark-light/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12"
               >
-                <FaQuoteLeft className="text-primary text-3xl mb-6 opacity-50" />
+                <FaQuoteLeft className="text-white text-3xl mb-6 opacity-30" />
                 
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 italic">
                   "{testimonials[current].text}"
@@ -88,7 +88,7 @@ const Testimonials = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                       <span className="text-dark font-bold text-lg">{testimonials[current].initials}</span>
                     </div>
                     <div>
@@ -98,7 +98,7 @@ const Testimonials = () => {
                   </div>
                   <div className="flex gap-1">
                     {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                      <FaStar key={i} className="text-primary text-sm" />
+                      <FaStar key={i} className="text-white text-sm" />
                     ))}
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const Testimonials = () => {
               <button
                 onClick={prev}
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center 
-                         text-white hover:bg-primary hover:border-primary hover:text-dark transition-all duration-300"
+                         text-white hover:bg-white hover:border-white hover:text-dark transition-all duration-300"
                 aria-label="Previous testimonial"
               >
                 <FaChevronLeft />
@@ -121,7 +121,7 @@ const Testimonials = () => {
                     key={index}
                     onClick={() => setCurrent(index)}
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                      index === current ? 'bg-primary w-8' : 'bg-white/30 hover:bg-white/50'
+                      index === current ? 'bg-white w-8' : 'bg-white/30 hover:bg-white/50'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -130,7 +130,7 @@ const Testimonials = () => {
               <button
                 onClick={next}
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center 
-                         text-white hover:bg-primary hover:border-primary hover:text-dark transition-all duration-300"
+                         text-white hover:bg-white hover:border-white hover:text-dark transition-all duration-300"
                 aria-label="Next testimonial"
               >
                 <FaChevronRight />

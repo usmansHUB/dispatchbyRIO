@@ -63,13 +63,13 @@ const About = () => {
             transition={{ duration: 0.7 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                          rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-6">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                          rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-6">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               About Us
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Driving <span className="text-primary">Success</span> For Every Trucker
+              Driving <span className="text-gray-300">Success</span> For Every Trucker
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
               We are Resolute Logistics — a team of passionate professionals dedicated to 
@@ -94,9 +94,9 @@ const About = () => {
                   alt="Our team at work"
                   className="rounded-2xl w-full h-[400px] lg:h-[500px] object-cover"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-primary rounded-2xl p-6 shadow-xl">
-                  <div className="text-dark font-extrabold text-4xl">5+</div>
-                  <div className="text-dark text-sm font-semibold">Years in<br />Business</div>
+                <div className="absolute -bottom-6 -right-6 bg-dark text-white rounded-2xl p-6 shadow-xl border border-white/25">
+                  <div className="font-extrabold text-4xl">5+</div>
+                  <div className="text-gray-300 text-sm font-semibold">Years in<br />Business</div>
                 </div>
               </div>
             </motion.div>
@@ -106,13 +106,13 @@ const About = () => {
               animate={storyInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <span className="inline-flex items-center gap-2 bg-primary/10 text-dark 
+              <span className="inline-flex items-center gap-2 bg-dark/5 text-dark 
                             rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                <span className="w-1.5 h-1.5 bg-dark rounded-full" />
                 Our Story
               </span>
               <h2 className="section-title text-dark mb-6">
-                Built By Truckers, <span className="text-primary">For</span> Truckers
+                Built By Truckers, <span className="text-gray-500">For</span> Truckers
               </h2>
               <p className="text-gray-600 text-base leading-relaxed mb-4">
                 Resolute Logistics was founded with a simple mission: to level the playing field 
@@ -134,7 +134,7 @@ const About = () => {
                   'Growing community of successful truckers',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-primary flex-shrink-0" />
+                    <FaCheckCircle className="text-dark flex-shrink-0" />
                     <span className="text-gray-700 text-sm font-medium">{item}</span>
                   </div>
                 ))}
@@ -155,11 +155,11 @@ const About = () => {
             >
               <span className="inline-flex items-center gap-2 bg-dark/5 text-dark 
                             rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                <span className="w-1.5 h-1.5 bg-dark rounded-full" />
                 Our Values
               </span>
               <h2 className="section-title text-dark mb-4">
-                What <span className="text-primary">Drives</span> Us
+                What <span className="text-gray-500">Drives</span> Us
               </h2>
             </motion.div>
           </div>
@@ -174,8 +174,8 @@ const About = () => {
                 className="bg-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl 
                          hover:-translate-y-2 transition-all duration-500 border border-gray-200"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                  <value.icon className="text-primary text-2xl" />
+                <div className="w-16 h-16 bg-dark/5 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                  <value.icon className="text-dark text-2xl" />
                 </div>
                 <h4 className="text-dark font-bold text-lg mb-3">{value.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{value.description}</p>
@@ -197,13 +197,13 @@ const About = () => {
               animate={timelineInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                            rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-4">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+              <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                            rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-4">
+                <span className="w-1.5 h-1.5 bg-white rounded-full" />
                 Our Journey
               </span>
               <h2 className="section-title text-white mb-4">
-                Our <span className="text-primary">Growth</span> Story
+                Our <span className="text-gray-300">Growth</span> Story
               </h2>
             </motion.div>
           </div>
@@ -223,12 +223,12 @@ const About = () => {
                 }`}
               >
                 {/* Dot */}
-                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full 
+                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full 
                               border-4 border-dark z-10" />
 
                 {/* Content */}
                 <div className={`ml-14 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <span className="text-primary font-extrabold text-lg">{item.year}</span>
+                  <span className="text-white font-extrabold text-lg">{item.year}</span>
                   <h5 className="text-white font-bold text-base mt-1">{item.title}</h5>
                   <p className="text-gray-400 text-sm mt-2 leading-relaxed">{item.description}</p>
                 </div>

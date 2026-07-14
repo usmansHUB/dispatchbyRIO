@@ -27,7 +27,7 @@ const CTA = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-title text-white mb-6">
-              Ready To <span className="text-primary">Maximize</span> Your Trucking Revenue?
+              Ready To <span className="text-gray-300">Maximize</span> Your Trucking Revenue?
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Join hundreds of satisfied owner-operators and fleet owners who trust Resolute Logistics 
@@ -65,13 +65,13 @@ const CTA = () => {
                     type="text"
                     placeholder="Full Name"
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm
-                             placeholder-gray-500 focus:border-primary focus:outline-none transition-colors"
+                             placeholder-gray-500 focus:border-white focus:outline-none transition-colors"
                   />
                   <input
                     type="email"
                     placeholder="Email Address"
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm
-                             placeholder-gray-500 focus:border-primary focus:outline-none transition-colors"
+                             placeholder-gray-500 focus:border-white focus:outline-none transition-colors"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -79,11 +79,11 @@ const CTA = () => {
                     type="tel"
                     placeholder="Phone Number"
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm
-                             placeholder-gray-500 focus:border-primary focus:outline-none transition-colors"
+                             placeholder-gray-500 focus:border-white focus:outline-none transition-colors"
                   />
                   <select
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-500 text-sm
-                             focus:border-primary focus:outline-none transition-colors appearance-none cursor-pointer"
+                             focus:border-white focus:outline-none transition-colors appearance-none cursor-pointer"
                   >
                     <option value="">Truck Type</option>
                     <option value="dry-van">Dry Van</option>
@@ -97,7 +97,7 @@ const CTA = () => {
                   placeholder="Tell us about your fleet..."
                   rows={3}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm
-                           placeholder-gray-500 focus:border-primary focus:outline-none transition-colors resize-none"
+                           placeholder-gray-500 focus:border-white focus:outline-none transition-colors resize-none"
                 />
                 <button type="submit" className="btn-yellow w-full py-4">
                   Get Free Quote

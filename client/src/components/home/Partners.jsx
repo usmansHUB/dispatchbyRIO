@@ -45,8 +45,8 @@ const Partners = () => {
               className="flex-shrink-0 mx-8 flex items-center justify-center"
             >
               <div className="bg-gray-100 rounded-xl px-8 py-4 min-w-[180px] text-center
-                            hover:bg-primary/10 transition-colors duration-300 border border-gray-200 
-                            hover:border-primary/30 cursor-pointer">
+                            hover:bg-dark/5 transition-colors duration-300 border border-gray-200 
+                            hover:border-dark/20 cursor-pointer">
                 <span className="text-dark font-bold text-sm tracking-wide whitespace-nowrap">
                   {partner}
                 </span>

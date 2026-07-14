@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-gray-100 py-20 lg:py-28 relative overflow-hidden" ref={ref}>
       {/* Decorative */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-dark via-dark/50 to-transparent" />
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -56,11 +56,11 @@ const WhyChooseUs = () => {
           >
             <span className="inline-flex items-center gap-2 bg-dark/5 text-dark 
                           rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+              <span className="w-1.5 h-1.5 bg-dark rounded-full" />
               Why Choose Us
             </span>
             <h2 className="section-title text-dark mb-4">
-              Why Truckers <span className="text-primary">Choose</span> Resolute
+              Why Truckers <span className="text-gray-500">Choose</span> Resolute
             </h2>
             <p className="section-subtitle text-gray-500 mx-auto">
               We go above and beyond to deliver results that matter to your bottom line
@@ -79,9 +79,9 @@ const WhyChooseUs = () => {
               className="flex gap-5 group"
             >
               <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 
-                            shadow-md group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 
+                            shadow-md group-hover:bg-dark group-hover:shadow-lg group-hover:shadow-black/20 
                             transition-all duration-300">
-                <feature.icon className="text-primary text-xl group-hover:text-dark transition-colors duration-300" />
+                <feature.icon className="text-dark text-xl group-hover:text-white transition-colors duration-300" />
               </div>
               <div>
                 <h5 className="text-dark font-bold text-lg mb-2">{feature.title}</h5>

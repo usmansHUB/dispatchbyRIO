@@ -45,7 +45,7 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
       className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-        isOpen ? 'border-primary/30 bg-dark-light/50' : 'border-white/10 hover:border-white/20'
+        isOpen ? 'border-white/30 bg-dark-light/50' : 'border-white/10 hover:border-white/20'
       }`}
     >
       <button
@@ -53,13 +53,13 @@ const AccordionItem = ({ faq, isOpen, onClick, index }) => {
         className="w-full flex items-center justify-between p-5 md:p-6 text-left group"
       >
         <span className={`font-bold text-base md:text-lg pr-4 transition-colors duration-300 ${
-          isOpen ? 'text-primary' : 'text-white group-hover:text-primary'
+          isOpen ? 'text-white' : 'text-gray-400 group-hover:text-white'
         }`}>
           {faq.question}
         </span>
         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 
                        transition-all duration-300 ${
-          isOpen ? 'bg-primary text-dark rotate-0' : 'bg-white/10 text-white'
+          isOpen ? 'bg-white text-dark rotate-0' : 'bg-white/10 text-white'
         }`}>
           {isOpen ? <FaMinus className="text-xs" /> : <FaPlus className="text-xs" />}
         </div>
@@ -93,7 +93,7 @@ const FAQ = () => {
   return (
     <section className="bg-dark py-20 lg:py-28 relative overflow-hidden" id="faq" ref={ref}>
       {/* Decorative */}
-      <div className="absolute top-20 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -103,13 +103,13 @@ const FAQ = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 
-                          rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-4">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 
+                          rounded-full px-4 py-1.5 text-sm font-semibold text-white mb-4">
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               FAQ
             </span>
             <h2 className="section-title text-white mb-4">
-              Frequently Asked <span className="text-primary">Questions</span>
+              Frequently Asked <span className="text-gray-400">Questions</span>
             </h2>
             <p className="section-subtitle text-gray-400 mx-auto">
               Got questions? We've got answers. Find everything you need to know about our dispatch services.
