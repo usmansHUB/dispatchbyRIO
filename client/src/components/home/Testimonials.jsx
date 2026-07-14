@@ -7,14 +7,14 @@ const testimonials = [
   {
     name: 'James Rodriguez',
     role: 'Owner-Operator, Dry Van',
-    text: 'Resolute Logistics has been a game-changer for my business. Their dispatchers consistently find loads that pay well above average. My revenue has increased by over 30% since I started working with them.',
+    text: 'DispatchByRIO has been a game-changer for my business. Their dispatchers consistently find loads that pay well above average. My revenue has increased by over 30% since I started working with them.',
     rating: 5,
     initials: 'JR',
   },
   {
     name: 'Michael Thompson',
     role: 'Fleet Owner, 12 Trucks',
-    text: 'Managing a fleet is challenging, but Resolute makes it so much easier. Their dedicated account manager keeps all my trucks loaded and their reporting tools give me full visibility into my operations.',
+    text: 'Managing a fleet is challenging, but DispatchByRIO makes it so much easier. Their dedicated account manager keeps all my trucks loaded and their reporting tools give me full visibility into my operations.',
     rating: 5,
     initials: 'MT',
   },
@@ -28,7 +28,7 @@ const testimonials = [
   {
     name: 'David Chen',
     role: 'Owner-Operator, Flatbed',
-    text: 'I switched to Resolute from another dispatch company and the difference was immediate. Better loads, higher rates, and a team that actually cares about my success. Highly recommended!',
+    text: 'I switched to DispatchByRIO from another dispatch company and the difference was immediate. Better loads, higher rates, and a team that actually cares about my success. Highly recommended!',
     rating: 5,
     initials: 'DC',
   },

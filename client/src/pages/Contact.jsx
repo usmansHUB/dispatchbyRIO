@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: FaEnvelope,
     title: 'Email Us',
-    details: ['info@resolute-logistics.com'],
-    link: 'mailto:info@resolute-logistics.com',
+    details: ['info@dispatchbyrio.com'],
+    link: 'mailto:info@dispatchbyrio.com',
   },
   {
     icon: FaMapMarkerAlt,
@@ -304,7 +304,7 @@ const Contact = () => {
             >
               <div className="bg-dark border border-white/10 rounded-2xl p-8 lg:p-10 mb-8">
                 <h3 className="text-white font-bold text-2xl mb-4">
-                  Why Choose <span className="text-gray-300">Resolute</span>?
+                  Why Choose <span className="text-gray-300">DispatchByRIO</span>?
                 </h3>
                 <div className="space-y-4">
                   {[

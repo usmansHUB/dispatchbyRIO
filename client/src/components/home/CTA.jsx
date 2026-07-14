@@ -30,7 +30,7 @@ const CTA = () => {
               Ready To <span className="text-gray-300">Maximize</span> Your Trucking Revenue?
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Join hundreds of satisfied owner-operators and fleet owners who trust Resolute Logistics 
+              Join hundreds of satisfied owner-operators and fleet owners who trust DispatchByRIO 
               to keep their trucks loaded with top-paying freight. Get started today — no contracts, 
               no hidden fees.
             </p>

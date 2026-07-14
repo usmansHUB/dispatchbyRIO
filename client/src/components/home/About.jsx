@@ -64,11 +64,11 @@ const AboutSection = () => {
             </span>
 
             <h2 className="section-title text-white mb-6">
-              We Are <span className="text-primary">Resolute</span> — Your Trusted Dispatch Partner
+              We Are <span className="text-gray-300">DispatchByRIO</span> — Your Trusted Dispatch Partner
             </h2>
 
             <p className="text-gray-400 text-base leading-relaxed mb-6">
-              At Resolute Logistics, we specialize in providing top-tier truck dispatch services 
+              At DispatchByRIO, we specialize in providing top-tier truck dispatch services 
               for owner-operators and fleet owners across the nation. Our experienced dispatchers 
               work tirelessly to find the best-paying loads, negotiate premium rates, and handle 
               all the paperwork so you can focus on what you do best — driving.

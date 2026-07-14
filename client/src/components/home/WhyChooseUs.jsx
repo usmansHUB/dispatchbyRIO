@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
               Why Choose Us
             </span>
             <h2 className="section-title text-dark mb-4">
-              Why Truckers <span className="text-gray-500">Choose</span> Resolute
+              Why Truckers <span className="text-gray-500">Choose</span> DispatchByRIO
             </h2>
             <p className="section-subtitle text-gray-500 mx-auto">
               We go above and beyond to deliver results that matter to your bottom line

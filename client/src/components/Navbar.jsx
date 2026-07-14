@@ -39,14 +39,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center 
                           group-hover:shadow-lg group-hover:shadow-white/20 transition-all duration-300">
-              <span className="text-dark font-extrabold text-xl">R</span>
+              <span className="text-dark font-extrabold text-xl">D</span>
             </div>
             <div className="flex flex-col">
               <span className="text-white font-bold text-lg leading-tight tracking-wide">
-                RESOLUTE
-              </span>
-              <span className="text-gray-400 text-[10px] tracking-[3px] uppercase font-semibold leading-tight">
-                Logistics
+                DispatchByRIO
               </span>
             </div>
           </Link>

@@ -72,7 +72,7 @@ const About = () => {
               Driving <span className="text-gray-300">Success</span> For Every Trucker
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              We are Resolute Logistics — a team of passionate professionals dedicated to 
+              We are DispatchByRIO — a team of passionate professionals dedicated to 
               revolutionizing truck dispatch services across the United States.
             </p>
           </motion.div>
@@ -115,7 +115,7 @@ const About = () => {
                 Built By Truckers, <span className="text-gray-500">For</span> Truckers
               </h2>
               <p className="text-gray-600 text-base leading-relaxed mb-4">
-                Resolute Logistics was founded with a simple mission: to level the playing field 
+                DispatchByRIO was founded with a simple mission: to level the playing field 
                 for independent owner-operators in the trucking industry. Our founders, with decades 
                 of combined experience in logistics and transportation, saw firsthand the challenges 
                 drivers face — from finding good-paying loads to managing complex paperwork.

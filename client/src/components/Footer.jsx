@@ -11,11 +11,10 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6 group">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-dark font-extrabold text-xl">R</span>
+                <span className="text-dark font-extrabold text-xl">D</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-bold text-lg leading-tight tracking-wide">RESOLUTE</span>
-                <span className="text-gray-400 text-[10px] tracking-[3px] uppercase font-semibold leading-tight">Logistics</span>
+                <span className="text-white font-bold text-lg leading-tight tracking-wide">DispatchByRIO</span>
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -107,9 +106,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@resolute-logistics.com" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                <a href="mailto:info@dispatchbyrio.com" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
                   <FaEnvelope className="text-white mt-1 flex-shrink-0" size={14} />
-                  <span className="text-sm">info@resolute-logistics.com</span>
+                  <span className="text-sm">info@dispatchbyrio.com</span>
                 </a>
               </li>
               <li>
@@ -127,7 +126,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Resolute Logistics. All Rights Reserved.
+            © {new Date().getFullYear()} DispatchByRIO. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>

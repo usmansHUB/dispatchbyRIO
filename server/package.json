@@ -1,7 +1,7 @@
 {
-  "name": "resolute-logistics-server",
+  "name": "dispatchbyrio-server",
   "version": "1.0.0",
-  "description": "Backend for Resolute Logistics clone",
+  "description": "Backend for DispatchByRIO clone",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

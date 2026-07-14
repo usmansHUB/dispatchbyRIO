@@ -1,6 +1,6 @@
-# Resolute Logistics Clone - MERN & Tailwind CSS
+# DispatchByRIO Clone - MERN & Tailwind CSS
 
-This is a premium MERN stack clone of the Resolute Logistics website, updated with a modern Black & White theme.
+This is a premium MERN stack clone of the DispatchByRIO website, updated with a modern Black & White theme.
 
 ## Architecture
 
@@ -20,7 +20,7 @@ Follow these steps to deploy the application to Vercel (Frontend) and Render (Ba
 2. Click **New** > **Web Service**.
 3. Connect your Git repository.
 4. Set the following configurations:
-   - **Name**: `resolute-logistics-backend` (or your preferred name)
+   - **Name**: `dispatchbyrio-backend` (or your preferred name)
    - **Runtime**: `Node`
    - **Root Directory**: `server`
    - **Build Command**: `npm install`
@@ -28,7 +28,7 @@ Follow these steps to deploy the application to Vercel (Frontend) and Render (Ba
 5. Click **Advanced** and add the following **Environment Variables**:
    - `MONGO_URI`: Your MongoDB Atlas connection string (e.g., `mongodb+srv://...`)
    - `PORT`: `10000` (Render's default)
-6. Click **Create Web Service**. Once deployed, copy your backend URL (e.g., `https://resolute-logistics-backend.onrender.com`).
+6. Click **Create Web Service**. Once deployed, copy your backend URL (e.g., `https://dispatchbyrio-backend.onrender.com`).
 
 ---
 
@@ -43,7 +43,7 @@ Follow these steps to deploy the application to Vercel (Frontend) and Render (Ba
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 5. Open **Environment Variables** and add:
-   - `VITE_API_URL`: Paste your Render backend URL (e.g., `https://resolute-logistics-backend.onrender.com`) without a trailing slash.
+   - `VITE_API_URL`: Paste your Render backend URL (e.g., `https://dispatchbyrio-backend.onrender.com`) without a trailing slash.
 6. Click **Deploy**. Vercel will build and host your frontend.
 
 ---

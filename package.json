@@ -1,7 +1,7 @@
 {
-  "name": "resolute-logistics-clone",
+  "name": "dispatchbyrio-clone",
   "version": "1.0.0",
-  "description": "Resolute Logistics website clone - MERN + Tailwind CSS",
+  "description": "DispatchByRIO website clone - MERN + Tailwind CSS",
   "scripts": {
     "server": "cd server && node server.js",
     "client": "cd client && npm run dev",
