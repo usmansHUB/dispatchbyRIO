@@ -7,10 +7,12 @@ import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
+import BookIntro from './components/BookIntro'
 
 function App() {
   return (
     <div className="min-h-screen bg-dark">
+      <BookIntro />
       <ScrollToTop />
       <Navbar />
       <main>

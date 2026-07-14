@@ -61,31 +61,19 @@
   }
 
   .btn-yellow {
-    @apply bg-white text-dark font-bold py-3 px-8 rounded-full 
-           transition-all duration-300 hover:bg-gray-200 hover:shadow-lg 
-           hover:shadow-white/20 hover:-translate-y-0.5 
-           inline-flex items-center justify-center gap-2 text-sm;
+    @apply bg-white text-dark font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-gray-200 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 text-sm;
   }
 
   .btn-black {
-    @apply bg-dark text-white font-bold py-3 px-8 rounded-full 
-           border-2 border-dark transition-all duration-300 
-           hover:bg-white hover:text-dark hover:-translate-y-0.5
-           inline-flex items-center justify-center gap-2 text-sm;
+    @apply bg-dark text-white font-bold py-3 px-8 rounded-full border-2 border-dark transition-all duration-300 hover:bg-white hover:text-dark hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 text-sm;
   }
 
   .btn-outline {
-    @apply bg-transparent text-dark font-bold py-3 px-8 rounded-full 
-           border-2 border-dark transition-all duration-300 
-           hover:bg-dark hover:text-white hover:-translate-y-0.5
-           inline-flex items-center justify-center gap-2 text-sm;
+    @apply bg-transparent text-dark font-bold py-3 px-8 rounded-full border-2 border-dark transition-all duration-300 hover:bg-dark hover:text-white hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 text-sm;
   }
 
   .btn-outline-white {
-    @apply bg-transparent text-white font-bold py-3 px-8 rounded-full 
-           border-2 border-white transition-all duration-300 
-           hover:bg-white hover:text-dark hover:border-white hover:-translate-y-0.5
-           inline-flex items-center justify-center gap-2 text-sm;
+    @apply bg-transparent text-white font-bold py-3 px-8 rounded-full border-2 border-white transition-all duration-300 hover:bg-white hover:text-dark hover:border-white hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 text-sm;
   }
 
   .gradient-overlay {
@@ -117,6 +105,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -128,6 +117,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -139,6 +129,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -146,9 +137,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -158,15 +152,19 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
   }
+
   50% {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   }
@@ -201,8 +199,22 @@
 }
 
 /* Delay utilities */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
