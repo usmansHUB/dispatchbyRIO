@@ -3,47 +3,39 @@ import { useEffect } from 'react'
 
 const PageLoader = ({ onComplete }) => {
   useEffect(() => {
-    // Total animation timeline takes 2.2 seconds
+    // Total animation timeline takes 2.0 seconds
     const timer = setTimeout(() => {
       onComplete()
-    }, 2200)
+    }, 2000)
     return () => clearTimeout(timer)
   }, [onComplete])
 
   return (
-    <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden bg-transparent">
-      {/* 1. Black Page Slide: A giant black thunderbolt shape sweeping from right to left */}
+    <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden">
+      {/* 1. White Page Slide: Sweeps in from right to left (100% -> 0%) and stays covering the screen */}
       <motion.div
-        className="absolute inset-0 w-full h-full text-dark-light"
+        className="absolute inset-0 bg-white"
         initial={{ x: "100%" }}
-        animate={{ x: "-100%" }}
+        animate={{ x: "0%" }}
         transition={{
-          duration: 1.2,
+          duration: 0.8,
           ease: "easeInOut"
         }}
-      >
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
-          <polygon points="70,0 30,55 50,55 15,100 80,45 55,45" fill="currentColor" />
-        </svg>
-      </motion.div>
+      />
 
-      {/* 2. White Page Slide: A giant white thunderbolt shape sweeping from left to right */}
+      {/* 2. Black Page Slide: Sweeps in from left to right (-100% -> 100%) covering the white screen and revealing the main page */}
       <motion.div
-        className="absolute inset-0 w-full h-full text-white"
+        className="absolute inset-0 bg-dark-light"
         initial={{ x: "-100%" }}
         animate={{ 
           x: ["-100%", "-100%", "100%"]
         }}
         transition={{
-          duration: 2.2,
-          times: [0, 0.45, 1], // Stays offscreen for 1.0s, then sweeps to the right in 1.2s
+          duration: 2.0,
+          times: [0, 0.4, 1], // Stays off-screen for 0.8s (0.4 of 2.0s), then sweeps to 100% in 1.2s
           ease: "easeInOut"
         }}
-      >
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
-          <polygon points="30,0 70,55 50,55 85,100 20,45 45,45" fill="currentColor" />
-        </svg>
-      </motion.div>
+      />
     </div>
   )
 }
