@@ -70,7 +70,7 @@ const Testimonials = () => {
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-dark to-transparent z-10 pointer-events-none" />
 
           {/* Marquee Row */}
-          <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 w-max cursor-grab">
+          <div className="flex animate-marquee gap-6 w-max cursor-grab">
             {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={`${testimonial.name}-${index}`}
