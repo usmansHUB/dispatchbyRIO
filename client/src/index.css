@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFFFFF;
+  --color-primary-dark: #E5E5E5;
+  --color-dark: #000000;
+  --color-dark-light: #1a1a1a;
+  --color-dark-lighter: #2a2a2a;
+  --color-light: #FFFFFF;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #E5E5E5;
+  --color-gray-300: #B5B5B5;
+  --color-gray-400: #808080;
+  --color-gray-500: #666666;
+  --font-sans: 'Open Sans', sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-20 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-yellow {
+    @apply bg-white text-dark font-bold py-3 px-8 rounded-full 
+           transition-all duration-300 hover:bg-gray-200 hover:shadow-lg 
+           hover:shadow-white/20 hover:-translate-y-0.5 
+           inline-flex items-center justify-center gap-2 text-sm;
+  }
+
+  .btn-black {
+    @apply bg-dark text-white font-bold py-3 px-8 rounded-full 
+           border-2 border-dark transition-all duration-300 
+           hover:bg-white hover:text-dark hover:-translate-y-0.5
+           inline-flex items-center justify-center gap-2 text-sm;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-dark font-bold py-3 px-8 rounded-full 
+           border-2 border-dark transition-all duration-300 
+           hover:bg-dark hover:text-white hover:-translate-y-0.5
+           inline-flex items-center justify-center gap-2 text-sm;
+  }
+
+  .btn-outline-white {
+    @apply bg-transparent text-white font-bold py-3 px-8 rounded-full 
+           border-2 border-white transition-all duration-300 
+           hover:bg-white hover:text-dark hover:border-white hover:-translate-y-0.5
+           inline-flex items-center justify-center gap-2 text-sm;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-[37px] font-bold leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-gray-400 text-base md:text-lg max-w-2xl;
+  }
+
+  .yellow-dot {
+    @apply inline-block w-2 h-2 bg-white rounded-full mr-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
