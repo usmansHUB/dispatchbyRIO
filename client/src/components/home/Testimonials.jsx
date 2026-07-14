@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaQuoteLeft, FaStar } from 'react-icons/fa'
 
 const testimonials = [
   {
@@ -35,20 +34,16 @@ const testimonials = [
 ]
 
 const Testimonials = () => {
-  const [current, setCurrent] = useState(0)
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
-
-  const next = () => setCurrent((prev) => (prev + 1) % testimonials.length)
-  const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
 
   return (
     <section className="bg-dark py-20 lg:py-28 relative overflow-hidden" ref={ref}>
       {/* Decorative */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/3 rounded-full blur-3xl" />
 
-      <div className="container-custom relative z-10">
+      <div className="relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="container-custom text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -68,74 +63,45 @@ const Testimonials = () => {
           </motion.div>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4 }}
-                className="bg-dark-light/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12"
+        {/* Marquee Ticker */}
+        <div className="relative overflow-hidden w-full py-4">
+          {/* Gradient Masks for smooth fades */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-dark to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-dark to-transparent z-10 pointer-events-none" />
+
+          {/* Marquee Row */}
+          <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 w-max cursor-grab">
+            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
+              <div
+                key={`${testimonial.name}-${index}`}
+                className="w-[350px] md:w-[400px] flex-shrink-0 bg-dark-light/50 backdrop-blur-sm 
+                           border border-white/10 rounded-2xl p-6 md:p-8 whitespace-normal select-none
+                           hover:border-white/30 transition-colors duration-300"
               >
-                <FaQuoteLeft className="text-white text-3xl mb-6 opacity-30" />
+                <FaQuoteLeft className="text-white text-2xl mb-4 opacity-30" />
                 
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 italic">
-                  "{testimonials[current].text}"
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 italic min-h-[90px]">
+                  "{testimonial.text}"
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
-                      <span className="text-dark font-bold text-lg">{testimonials[current].initials}</span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                      <span className="text-dark font-bold text-sm">{testimonial.initials}</span>
                     </div>
                     <div>
-                      <h5 className="text-white font-bold text-base">{testimonials[current].name}</h5>
-                      <p className="text-gray-400 text-sm">{testimonials[current].role}</p>
+                      <h5 className="text-white font-bold text-sm">{testimonial.name}</h5>
+                      <p className="text-gray-500 text-xs">{testimonial.role}</p>
                     </div>
                   </div>
-                  <div className="flex gap-1">
-                    {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                      <FaStar key={i} className="text-white text-sm" />
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <FaStar key={i} className="text-white text-xs" />
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Arrows */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prev}
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center 
-                         text-white hover:bg-white hover:border-white hover:text-dark transition-all duration-300"
-                aria-label="Previous testimonial"
-              >
-                <FaChevronLeft />
-              </button>
-              <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrent(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                      index === current ? 'bg-white w-8' : 'bg-white/30 hover:bg-white/50'
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
               </div>
-              <button
-                onClick={next}
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center 
-                         text-white hover:bg-white hover:border-white hover:text-dark transition-all duration-300"
-                aria-label="Next testimonial"
-              >
-                <FaChevronRight />
-              </button>
-            </div>
+            ))}
           </div>
         </div>
       </div>
