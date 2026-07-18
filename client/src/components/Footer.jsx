@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import logoImg from '../assets/logo.jpg'
 
 const Footer = () => {
   return (
@@ -9,13 +10,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-dark font-extrabold text-xl">D</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-lg leading-tight tracking-wide">DispatchByRIO</span>
-              </div>
+            <Link to="/" className="flex items-center mb-6 group">
+              <img 
+                src={logoImg} 
+                alt="DispatchByRIO Logo" 
+                className="h-14 md:h-16 w-auto object-contain drop-shadow-lg" 
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Professional truck dispatch services for owner-operators and fleet owners across the United States. 
@@ -45,7 +45,7 @@ const Footer = () => {
           <div>
             <h5 className="text-white font-bold text-lg mb-6 relative">
               Quick Links
-              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-white"></span>
+              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-primary"></span>
             </h5>
             <ul className="space-y-3 mt-4">
               {[
@@ -71,7 +71,7 @@ const Footer = () => {
           <div>
             <h5 className="text-white font-bold text-lg mb-6 relative">
               Our Services
-              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-white"></span>
+              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-primary"></span>
             </h5>
             <ul className="space-y-3 mt-4">
               {[
@@ -96,7 +96,7 @@ const Footer = () => {
           <div>
             <h5 className="text-white font-bold text-lg mb-6 relative">
               Contact Us
-              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-white"></span>
+              <span className="absolute bottom-[-8px] left-0 w-8 h-0.5 bg-primary"></span>
             </h5>
             <ul className="space-y-4 mt-4">
               <li>

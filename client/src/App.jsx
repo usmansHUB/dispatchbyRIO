@@ -8,6 +8,9 @@ import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import BookIntro from './components/BookIntro'
+import Insurance from './pages/Insurance'
+import Consulting from './pages/Consulting'
+import Logistics from './pages/Logistics'
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/prices" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/insurance" element={<Insurance />} />
+          <Route path="/services/consulting" element={<Consulting />} />
+          <Route path="/services/logistics" element={<Logistics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

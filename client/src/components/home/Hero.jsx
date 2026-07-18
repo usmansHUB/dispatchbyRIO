@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaPlay } from 'react-icons/fa'
+import logoImg from '../../assets/logo.jpg'
 
 const Hero = () => {
   return (
@@ -101,8 +102,8 @@ const Hero = () => {
               <div className="bg-dark-light/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
                             shadow-2xl shadow-black/40 max-w-sm">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                    <span className="text-dark font-extrabold text-lg">R</span>
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                    <img src={logoImg} alt="Rio Logo" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h4 className="text-white font-bold">Quick Dispatch</h4>
